@@ -1,23 +1,17 @@
 <script>
 	// export var name
-	const name = "Bro"
-	const src = "https://	"
 	import Content from './pages/test.svelte'
+	import Navigation from './pages/navigation.svelte'
 </script>
 <div class="app">
-	<nav class="navigation">
-		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Contacts</a></li>
-		</ul>
-	</nav>
+	<Navigation/>
 	<Content/>
 </div>
 
 <style>
 	.app {
-		display: flex;
+		font-family: Montserrat;
+		width:100%;
+		height: 100%;
 	}
-	
 </style>
