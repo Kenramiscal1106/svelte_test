@@ -22,7 +22,7 @@
     padding:0.5rem;
     box-shadow:0 2px 0.25rem 0 #111; 
   }
-  nav.navigation.dark {--bg:black;--color:white;}
+  nav.navigation.dark {--bg:hsl(219,13%,18%);--color:white;}
   ul.navigation-list {
     display:flex;
     align-items: center;

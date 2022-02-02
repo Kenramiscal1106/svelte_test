@@ -2,17 +2,19 @@ html, body {
   margin:0;
   padding:0;
   width:100%;
-  height:100%;    
+  height:100%;
+      
 }
 .app {
-  --bg: white;
+  --bg: hsl(210,28%,97%);
   --color:black;
   background:var(--bg);
   color: var(--color);
+  transition: 0.3s ease;
 }
 .app.dark {
-  --bg:#131313;
-  --color:white;
+  --bg:hsl(216,13%,14%);
+  --color:hsl(0,0%,80%);
   background:var(--bg);
   color:var(--color);
 }
