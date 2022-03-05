@@ -1,6 +1,7 @@
 <script>
 	// export var name
 	import Content from './pages/test.svelte'
+	import {marked} from 'marked'
 	import Navigation from './pages/navigation.svelte'
 	export let theme;
 	$:isdark = true;
@@ -15,11 +16,11 @@
       isdark=true;
     };
   }
+	let mdinput = ``;
 </script>
 <div class="app {theme}">
 	<Navigation theme={theme}>
-		<svelte:fragment slot="theme">
-			<button on:click={toggle_theme} class="theme">
+			<button on:click={toggle_theme} slot="theme" class="theme">
 				<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<g id="theme-toggle">
 					<path id="Sun" class={theme} fill-rule="evenodd" clip-rule="evenodd" d="M19.3555 6.19191L15.5 0L11.6445 6.19191L4.53984 4.53984L6.19191 11.6445L0 15.5L6.19191 19.3555L4.53984 26.4602L11.6445 24.8081L15.5 31L19.3555 24.8081L26.4602 26.4602L24.8081 19.3555L31 15.5L24.8081 11.6445L26.4602 4.53984L19.3555 6.19191ZM15.5 21.7C18.9242 21.7 21.7 18.9242 21.7 15.5C21.7 12.0758 18.9242 9.3 15.5 9.3C12.0758 9.3 9.3 12.0758 9.3 15.5C9.3 18.9242 12.0758 21.7 15.5 21.7Z"/>
@@ -48,7 +49,6 @@
 					</g>
 					</svg>
 			</button>
-		</svelte:fragment>
 	</Navigation>
 	<Content/>
 	{theme}
